@@ -14,10 +14,13 @@ import { FooterComponent } from './footer/footer.component';
 import { PageHeaderComponent } from './page-header/page-header.component';
 import { ContentHeaderComponent } from './content-header/content-header.component';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
+import { AppRootComponent } from './app.root.component';
+import { AuthGuard } from './auth/guards';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AppRootComponent,
     CardComponent,
     TableRowComponent,
     TableHeadComponent,
@@ -34,7 +37,7 @@ import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [AuthGuard],
+  bootstrap: [AppRootComponent]
 })
 export class AppModule { }

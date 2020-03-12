@@ -26,8 +26,11 @@
             
             "styles": [
               "src/styles.css",
-			  "src/assets/scss/sb-admin-2.scss"
-            ],
+        "src/assets/scss/sb-admin-2.scss",
+        "src/styles/styles.scss"],
+                        "stylePreprocessorOptions": {
+                            "includePaths": ["src", "./node_modules"]
+                        },
             "scripts": [
 			]
           },
