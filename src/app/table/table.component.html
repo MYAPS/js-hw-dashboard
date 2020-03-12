@@ -1,0 +1,21 @@
+		<!-- Table Template-->
+        <div class="card shadow mb-4 w-100">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Test Report</h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <!-- Table header here -->
+                <app-table-head [data]="tableHeaders"></app-table-head>
+                <!-- End of Table header-->
+                  <tbody>
+                  <!-- Table Rows here -->
+                  <app-table-row *ngFor="let row of tableRows" [data]="row"></app-table-row>
+                  <!-- End of Table Rows-->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+		<!-- End of Table Template-->

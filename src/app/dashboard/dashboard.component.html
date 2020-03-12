@@ -1,0 +1,43 @@
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+		<!-- Page Header here -->
+		<app-page-header></app-page-header>
+		<!-- End of Page Header -->
+
+        <!-- Begin Page Content container-fluid container-->
+        <div class="container-fluid">
+
+		    <!-- Content Header here -->
+		    <app-content-header></app-content-header>
+		    <!-- End of Content Header -->
+
+            <!-- Card Layout here -->
+		    <app-card-layout [data]="data.cards"></app-card-layout>
+		    <!-- End of Card Layout -->
+		  
+		    <!-- Table Layout here -->
+		    <app-table-layout [tableRows]="data.tableRows" [tableHeaders]="data.tableHeaders"></app-table-layout>
+		    <!-- End of Table Layout -->
+		</div>
+        <!-- End of  /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer here -->
+	  <app-footer></app-footer>
+	  <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+
