@@ -1,18 +1,17 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
-import { Observable, of } from 'rxjs';
-import { AuthenticationService } from '../services/authentication.service';
+import { AuthService } from '../services/auth.service';
 
 @Injectable()
-export class AuthGuard implements CanActivate {
+export class AuthGuard<T> implements CanActivate {
     constructor(
         private router: Router,
-        private authenticationService: AuthenticationService
+        @Inject('myService') private authenticationService: AuthService<T>
     ) { }
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-        const currentUser = this.authenticationService.currentUserValue;
+        const currentUser = this.authenticationService.currentUserValue();
         if (currentUser) {
-            // logged in so return true
+            console.log(currentUser);
             return true;
         }
 

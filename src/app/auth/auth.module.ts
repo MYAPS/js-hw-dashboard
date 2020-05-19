@@ -16,6 +16,7 @@ import * as authGuards from './guards';
 
 /* Services */
 import * as authServices from './services';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
     imports: [
@@ -24,7 +25,6 @@ import * as authServices from './services';
         ReactiveFormsModule,
         FormsModule,
         HttpClientModule
-        
     ],
     providers: [...authServices.services, ...authGuards.guards],
     declarations: [...authContainers.containers, ...authComponents.components],

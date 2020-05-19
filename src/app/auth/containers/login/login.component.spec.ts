@@ -34,7 +34,7 @@ describe('LoginComponent', () => {
 
         fixture = TestBed.createComponent(TestHostComponent);
         hostComponent = fixture.componentInstance;
-        hostComponentDE = fixture.debugElement;
+        hostComponentDE = fixture.debugElement.nativeElement;
         hostComponentNE = hostComponentDE.nativeElement;
 
         componentDE = hostComponentDE.children[0];

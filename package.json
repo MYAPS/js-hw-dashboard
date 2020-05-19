@@ -7,6 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
+	"compodoc": "compodoc",
+	"generate-docs":"compodoc -p tsconfig.json",
+	"serve-docs":"compodoc -s tsconfig.json",
     "e2e": "ng e2e"
   },
   "private": true,
@@ -19,6 +22,7 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "@compodoc/compodoc": "^1.1.11",
     "@types/jquery": "^3.3.33",
     "bootstrap": "^4.4.1",
     "datatables": "^1.10.18",

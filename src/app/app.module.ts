@@ -15,7 +15,8 @@ import { PageHeaderComponent } from './page-header/page-header.component';
 import { ContentHeaderComponent } from './content-header/content-header.component';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 import { AppRootComponent } from './app.root.component';
-import { AuthGuard } from './auth/guards';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -35,9 +36,8 @@ import { AuthGuard } from './auth/guards';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [AuthGuard],
+    AppRoutingModule,
+    RouterModule  ],
   bootstrap: [AppRootComponent]
 })
 export class AppModule { }
