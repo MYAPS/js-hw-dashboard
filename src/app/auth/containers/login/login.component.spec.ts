@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { LoginComponent } from './login.component';
+import { User } from '../../models';
 
 @Component({
     template: `
@@ -20,7 +21,7 @@ describe('LoginComponent', () => {
     let hostComponentDE: DebugElement;
     let hostComponentNE: Element;
 
-    let component: LoginComponent;
+    let component: LoginComponent<User>;
     let componentDE: DebugElement;
     let componentNE: Element;
 

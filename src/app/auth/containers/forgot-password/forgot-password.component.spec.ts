@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ForgotPasswordComponent } from './forgot-password.component';
+import { User } from '../../models';
 
 @Component({
     template: `
@@ -23,7 +24,7 @@ describe('ForgotPasswordComponent', () => {
     let hostComponentDE: DebugElement;
     let hostComponentNE: Element;
 
-    let component: ForgotPasswordComponent;
+    let component: ForgotPasswordComponent<User>;
     let componentDE: DebugElement;
     let componentNE: Element;
 

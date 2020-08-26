@@ -35,6 +35,5 @@ describe('CardLayoutComponent', () => {
   it('should have row classed container', () => {
     let elem: DebugElement = fixture.debugElement.query(By.css('row'));
     expect(elem).toBeTruthy();
-    loginEl.nativeElement.value
   });
 });
